@@ -34,6 +34,10 @@
 <CHANGES>
 ##&name;
 
+###2017.01.14
+- Match perl version 5.22.2
+- remove perl req
+
 ###2016.02.28
 - Bump the version of perl to match nerd tools.
 
@@ -242,7 +246,6 @@ removepkg $(basename &snmppkg; .txz) | grep -v -e '  --&gt; Deleting'
 
 # Don't Uninstall the prerequisites, in case some other plug is using them. On reboot, they'll get "removed" if no plugin
 # needs them, or will be re-downloaded and reinstalled by some plugin that does need them.
-#removepkg $(basename &perlpkg; .txz) | grep -v -e '  --&gt; Deleting'
 #removepkg $(basename &libnlpkg; .txz) | grep -v -e '  --&gt; Deleting'
 
 echo ""
