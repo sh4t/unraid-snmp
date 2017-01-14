@@ -2,9 +2,9 @@
 
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "snmp">
-<!ENTITY author      "coppit">
+<!ENTITY author      "sh4t">
 <!ENTITY version     "2016.02.28">
-<!ENTITY pluginURL   "https://github.com/coppit/unraid-snmp/raw/master/snmp.plg">
+<!ENTITY pluginURL   "https://github.com/sh4t/unraid-snmp/raw/master/snmp.plg">
 <!ENTITY pkgversion  "5.7.2">
 <!ENTITY gitURL      "https://raw.githubusercontent.com/&author;/unraid-snmp/master">
 <!ENTITY plugdir     "/usr/local/emhttp/plugins/&name;">
@@ -14,9 +14,6 @@
 
 <!ENTITY snmppkg     "net-snmp-&pkgversion;-x86_64-2.txz">
 <!ENTITY snmppkgmd5  "5b0a0b875e962707bd67fcd9a11f9d78">
-
-<!ENTITY perlpkg     "perl-5.22.0-x86_64-2.txz">
-<!ENTITY perlpkgmd5  "0d3e2ecf19b061b2646b2fb69dc211ed">
 
 <!ENTITY libnlpkg    "libnl-1.1.4-x86_64-1.txz">
 <!ENTITY libnlpkgmd5 "435837a5bf0401a937d6ec93e458333b">
@@ -83,10 +80,6 @@ monitoring tools like Observium.
 <!--
 Install prerequisites.
 -->
-<FILE Name="&pkgdir;/&perlpkg;" Run="upgradepkg --install-new">
-<URL>&pkghost;/&perlpkg;</URL>
-<MD5>&perlpkgmd5;</MD5>
-</FILE>
 <FILE Name="&pkgdir;/&libnlpkg;" Run="upgradepkg --install-new">
 <URL>&pkghost;/&libnlpkg;</URL>
 <MD5>&libnlpkgmd5;</MD5>
@@ -222,6 +215,7 @@ echo ""
 echo "-----------------------------------------------------------"
 echo " &name; has been installed."
 echo " Copyright 2015, David Coppit &lt;david@coppit.org&gt;"
+echo " Modified / Updated 2017, Justin Shattuck"
 echo " Version: &version;"
 echo "-----------------------------------------------------------"
 echo ""
