@@ -235,7 +235,7 @@ echo "+=========================================================================
 rm -f $(ls &pkgdir;/&name;*.txz 2>/dev/null)
 
 # Delete the prerequisite packages
-rm -f &pkgdir;/&perlpkg; &pkgdir;/&libnlpkg;
+rm -f &pkgdir;/&libnlpkg;
 
 # Uninstall the package
 removepkg $(basename &snmppkg; .txz) | grep -v -e '  --&gt; Deleting'
